@@ -36,7 +36,7 @@ npm install
 5. Start the development server:
 npm run dev
 
-6.Open the local URL displayed in your terminal.
+6. Open the local URL displayed in your terminal.
 
 Build
 To create a production build:
