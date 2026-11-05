@@ -15,87 +15,80 @@ export default function App(){const[page,setPage]=useState('Home'),[project,setP
 {page==='About'&&<Inner kicker="01 / ABOUT" title={<>A little about <em>me.</em></>} subtitle="A short introduction, with room for the story behind the work."><div className="about-layout"><div className="about-art"><img src="/about-photo.jpg" alt="Naw Htoo Wai in Paris" /></div><div><h2>Technology is most interesting when it makes something <em>better.</em></h2><p>I’m Naw Htoo Wai, a Computing postgraduate based in Sheffield, United Kingdom. I’m interested in software and web development, mobile applications, cloud engineering and the ways technology can solve practical problems.</p><p>My academic projects have given me opportunities to explore cloud-native application design, full-stack web development, booking systems, database modelling and big data concepts. I enjoy learning new tools, working through challenges and developing ideas into useful solutions.</p><div className="facts"><div><small>BASED IN</small><b>Sheffield, United Kingdom</b></div><div><small>INTERESTS</small><b>Software · Cloud · Data</b></div></div></div></div></Inner>}
 {page==='Projects'&&<Inner kicker="02 / SELECTED WORK" title={<>Projects & <em>experiments.</em></>} subtitle="Select a project to explore the thinking, tools and work behind it."><div className="cards">{projects.map(p=><ProjectCard key={p.id} p={p} click={()=>open(p)}/>)}</div></Inner>}
 {page==='Project detail'&&<Inner><button className="back" onClick={()=>go('Projects')}><ArrowLeft size={15}/> BACK TO PROJECTS</button><p className="eyebrow">{project.n} / {project.cat}</p><h1 className="detail-title">{project.title}</h1><p className="subline">{project.sub}</p><div className={'detail-visual visual '+project.visual}><Visual p={project}/></div><div className="detail-columns"><div><small className="eyebrow">OVERVIEW</small><h2>{project.summary}</h2></div><div><small className="eyebrow">PROJECT CONTRIBUTIONS</small><ul>{project.details.map((d,i)=><li key={i}>{d}</li>)}</ul></div></div><div className="tech"><p className="eyebrow">TECHNOLOGIES & TOOLS</p><Tags items={project.tech}/><p className="date">PROJECT DATE · {project.date}</p>{project.link&&<a className="textbtn" href={project.link} target="_blank" rel="noreferrer">Visit project <ExternalLink size={14}/></a>}</div></Inner>}
-{page==='Experience'&&<Inner kicker="03 / EXPERIENCE" title={<>Experience & <em>practice.</em></>} subtitle="My professional journey across technology, administration and business.">
+{page==='Experience'&&<Inner kicker="03 / EXPERIENCE" title={<>Job <em>experiences </em></>} subtitle="My professional journey across Singapore and UK, spanning technology, business and university environments.">
+{/* FULL-TIME JOB EXPERIENCES */}
+<div className="experience-group">
+    <p className="eyebrow">FULL TIME JOB EXPERIENCES</p>
 
-  <div className="timeline">
-    <div className="timeline-date">SEP 2026 — PRESENT</div>
-    <div>
-      <h2>Student Mentor – Computing</h2>
-      <h3>Sheffield Hallam University · Sheffield, UK</h3>
-      <ul>
-        <li>Support Computing students with their academic development and university experience.</li>
-        <li>Provide guidance and encourage student engagement and collaboration.</li>
-      </ul>
+    <div className="timeline">
+      <div className="timeline-date">09/2025 — 09/2026</div>
+      <div>
+        <h2>IT Operations Intern - Web, Software & Digital Systems</h2>
+        <h3>Tsuki Sheffield · United Kingdom</h3>
+        <ul>
+          <li>Monitored and maintained backend systems for tablet-based ordering platforms, including database connectivity, menu synchronisation and user permissions.</li>
+          <li>Supported website maintenance and frontend updates using HTML, CSS and CMS tools, including updating menus, images, promotional banners and website content.</li>
+          <li>Assisted with testing and troubleshooting online payment platforms, including digital gift vouchers and payment-related issues.</li>
+          <li>Conducted functional and bug testing across websites and digital ordering systems, identifying issues and suggesting improvements to user experience (UX/UI).</li>
+          <li>Troubleshot technical issues involving digital menus, ordering tablets and in-house IT devices to support daily business operations.</li>
+          <li>Provided technical support to staff, helping resolve software, hardware and system-related problems.</li>
+          <li>Documented technical processes, system changes and troubleshooting activities to support effective IT operations.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div className="timeline">
+      <div className="timeline-date">04/2021 — 03/2024</div>
+      <div>
+        <h2>Business Technology Administrator (IT Focused)</h2>
+        <h3>Grey and Sanders Singapore · Singapore, Singapore</h3>
+        <ul>
+          <li>Communicated effectively with production teams, suppliers, and internal colleagues to ensure smooth operations and resolve issues promptly—transferable skills valuable for client and team case management in IT roles.</li>
+          <li>Used <strong>Magento</strong> backend to update and upload website images, manage user accounts, and add new users following onboarding, demonstrating practical experience with e-commerce platforms.</li>
+          <li>Managed stock adjustments through <strong>NickNack</strong> software, ensuring accurate inventory control.</li>
+          <li>Coordinated internal communications and task tracking using <strong>Asana</strong>, supporting team collaboration and project management.</li>
+          <li>Monitored project timelines and objectives with <strong>Jira</strong>, improving workflow efficiency and ensuring timely delivery.</li>
+          <li>Developed a strong understanding of IT tools and software relevant to business processes, enhancing skills applicable to IT support and project roles.</li>
+          <li>Managed employee administration and payroll processing, ensuring accurate and timely payments.</li>
+          <li>Coordinated work pass applications and ensured compliance with the Ministry of Manpower (M.O.M.).</li>
+          <li>Led recruitment activities including job advertising, CV screening, interviewing, onboarding, and handling employee terminations.</li>
+        </ul>
+      </div>
     </div>
   </div>
 
-  <div className="timeline">
-    <div className="timeline-date">SEP 2026 — PRESENT</div>
-    <div>
-      <h2>GoGlobal Ambassador</h2>
-      <h3>Sheffield Hallam University · Sheffield, UK</h3>
-      <ul>
-        <li>Represent and support international engagement activities at the university.</li>
-      </ul>
-    </div>
-  </div>
+  {/* PART-TIME JOB EXPERIENCES */}
+  <div className="experience-group">
+    <p className="eyebrow">PART TIME JOB EXPERIENCES</p>
 
-  <div className="timeline">
-    <div className="timeline-date">SEP 2025 — PRESENT</div>
-    <div>
-      <h2>International Student Ambassador</h2>
-      <h3>Sheffield Hallam University · Sheffield, UK</h3>
-      <ul>
-        <li>Support international student activities and help promote the university experience.</li>
-      </ul>
+    <div className="timeline">
+      <div className="timeline-date">
+        09/2026 — 01/2027<br/>(5 months contract)
+      </div>
+      <div>
+        <h2>Student Mentor – Computing</h2>
+        <h3>Sheffield Hallam University, UK</h3>
+      </div>
     </div>
-  </div>
 
-  <div className="timeline">
-    <div className="timeline-date">SEP 2025 — SEP 2026</div>
-    <div>
-      <h2>IT Operations Intern (Placement)</h2>
-      <h3>Tsuki · Sheffield, UK</h3>
-      <ul>
-        <li>Gained practical exposure to software infrastructure and IT operations.</li>
-      </ul>
+    <div className="timeline">
+      <div className="timeline-date">
+        09/2026 — 04/2027<br/>(8 months contract)
+      </div>
+      <div>
+        <h2>GoGlobal Ambassador</h2>
+        <h3>Sheffield Hallam University, UK</h3>
+      </div>
     </div>
-  </div>
 
-  <div className="timeline">
-    <div className="timeline-date">APR 2021 — MAR 2024</div>
-    <div>
-      <h2>Procurement & HR Administrator</h2>
-      <h3>Grey & Sanders · Singapore</h3>
-      <ul>
-        <li>Used Magento to update website images, manage user accounts and add new users.</li>
-        <li>Managed stock adjustments using NickNack software.</li>
-        <li>Coordinated communications and task tracking using Asana.</li>
-        <li>Monitored project timelines using Jira.</li>
-        <li>Supported payroll, recruitment, employee administration and work pass applications.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div className="timeline">
-    <div className="timeline-date">MAY 2017 — MAR 2019</div>
-    <div>
-      <h2>Business Development Executive</h2>
-      <h3>K.W.Z.M Distributer Mandalay · Myanmar</h3>
-      <ul>
-        <li>Worked in business development and supported business operations.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div className="timeline">
-    <div className="timeline-date">FEB 2016 — MAR 2017</div>
-    <div>
-      <h2>Junior Sales Executive</h2>
-      <h3>Unilever Distributer Mandalay · Myanmar</h3>
-      <ul>
-        <li>Gained experience in sales processes and customer-facing business activities.</li>
-      </ul>
+    <div className="timeline">
+      <div className="timeline-date">
+        09/2025 — 04/2027<br/>(1 year and half contract)
+      </div>
+      <div>
+        <h2>International Student Ambassador</h2>
+        <h3>Sheffield Hallam University, UK</h3>
+      </div>
     </div>
   </div>
 
