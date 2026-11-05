@@ -1,23 +1,48 @@
-# Naw Htoo Wai — Minimalist Luxury Portfolio
+Naw Htoo Wai | Personal Portfolio
+A personal portfolio website showcasing my background, technical skills, professional experience and projects in computing and software development.
+Designed with a minimalist luxury aesthetic, featuring warm ivory and beige tones, clean layouts and focused navigation.
 
-A fresh React/Vite portfolio with a warm ivory and beige editorial style. Navigation opens focused sections rather than putting all details on the homepage.
+Overview
 
-## Run locally
-1. Install Node.js LTS: https://nodejs.org/
-2. Open this folder in Visual Studio Code.
-3. Choose Terminal → New Terminal.
-4. Run `npm install`.
-5. Run `npm run dev`.
-6. Open the local address shown in the terminal (usually http://localhost:5173).
+This portfolio serves as a central place to explore my professional background, technical interests and development projects.# Naw Htoo Wai - Minimalist Luxury Portfolio
 
-## Personalise before publishing
-- Add your professional portrait as `public/portrait.jpg`; the current homepage uses a monogram placeholder.
-- Confirm current education dates and any CV details that have changed.
-- Replace the generic GitHub link with your exact profile URL.
-- Review project descriptions and skills for accuracy.
-- Add a PDF CV if you later want a CV download feature.
+Technologies
+-React
+-JavaScript
+-HTML5
+-CSS3
+-Vite
 
-## Deploy
-Run `npm run build`, then publish the GitHub repository using https://vercel.com/
+Key Features
+- Minimalist and responsive design
+- Focused navigation and organised content sections
+- Professional profile and experience
+- Technical skills and project showcase
+- Dedicated sections for education and professional background
 
-All biography, experience, education, skills and project details are based on the CV supplied and should be reviewed before publishing.
+Getting Started
+To run the project locally:
+1. Install Node.js.
+
+2. Clone this repository:
+git clone https://github.com/naw187/my-portfolio.git
+
+3. Navigate to the project directory:
+cd my-portfolio
+
+4. Install dependencies:
+npm install
+
+5. Start the development server:
+npm run dev
+
+6. Open the local URL displayed in your terminal.
+
+Build
+To create a production build:
+npm run build
+
+Deployment
+The portfolio is managed through GitHub, with Vercel used for deployment.
+
+Portfolio: https://naw-htoo-wai-portfolio-v5-new-proje.vercel.app/
