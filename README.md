@@ -21,3 +21,5 @@ A fresh React/Vite portfolio with a warm ivory and beige editorial style. Naviga
 Run `npm run build`, then publish the GitHub repository using https://vercel.com/
 
 All biography, experience, education, skills and project details are based on the CV supplied and should be reviewed before publishing.
+
+Deployed and managed with GitHub and Vercel.
