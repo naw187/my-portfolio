@@ -4,7 +4,7 @@ Designed with a minimalist luxury aesthetic, featuring warm ivory and beige tone
 
 Overview
 
-This portfolio serves as a central place to explore my professional background, technical interests and development projects.# Naw Htoo Wai — Minimalist Luxury Portfolio
+This portfolio serves as a central place to explore my professional background, technical interests and development projects.# Naw Htoo Wai - Minimalist Luxury Portfolio
 
 Technologies
 -React
@@ -44,3 +44,5 @@ npm run build
 
 Deployment
 The portfolio is managed through GitHub, with Vercel used for deployment.
+
+Portfolio: https://naw-htoo-wai-portfolio-v5-new-proje.vercel.app/
