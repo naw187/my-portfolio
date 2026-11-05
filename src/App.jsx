@@ -1,6 +1,6 @@
 import React,{useState}from'react';
 import{ArrowLeft,ArrowRight,ArrowUpRight,Linkedin,Github,Mail,Menu,X,ExternalLink,Code2,Cloud,Database,BriefcaseBusiness,GraduationCap,Sparkles}from'lucide-react';
-const linkedin='https://www.linkedin.com/in/naw-htoo-wai-9305202a3',email='adoranaw.nhw@gmail.com';
+const linkedin='https://www.linkedin.com/in/naw-htoo-wai-9305202a3',email='naw.h.wai.ms@gmail.com';
 const projects=[
 {id:'endometriosis-ai',n:'01',title:'AI for Endometriosis Detection',sub:'Multimodal Medical Imaging · MSc Dissertation',cat:'AI · MEDICAL IMAGING · RESEARCH',summary:'An ongoing MSc research project exploring AI-based analysis of MRI and transvaginal ultrasound (TVUS) images to identify endometriosis-related findings.',date:'2026 — IN DEVELOPMENT',visual:'health',cover:'/endometriosis-cover.jpg',tech:['Python','MRI','TVUS','Classical CNN','Quantum CNN (QCNN)','Keras','GPU','NVIDIA Jetson','Web Development'],details:['Explore the suitability, labels and permitted use of MRI and TVUS image datasets.','Develop and compare a Classical Convolutional Neural Network (CNN) and a Quantum Convolutional Neural Network (QCNN).','Build a web application where users can upload medical images and view outputs from both models.','Use Keras as a resource and framework for model development and experimentation.','Investigate GPU support for model training and inference, and explore NVIDIA Jetson for local model execution.']},
 
