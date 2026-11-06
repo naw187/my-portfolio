@@ -18,7 +18,6 @@
 .card.featured .visual { background: linear-gradient(135deg, #e3e0d7, #d6c7b3); }
 
 
-/* Real image covers for featured project cards */
 .project-cover-image {
   width: 100%;
   height: 100%;
@@ -26,18 +25,45 @@
   object-fit: contain;
   object-position: center;
 }
-/* Challenge UK – full-width homepage project cover */
-.challenge-project-card > .visual {
-  width: 100% !important;
-  max-width: none !important;
-  grid-column: 1 / -1;
+
+/* =====================================
+   PROJECT IMAGE STYLING
+   ===================================== */
+
+/* Challenge UK homepage card */
+.card.challenge-project-card > .visual {
+  display: block;
+  width: 100%;
+  height: 205px;
+  padding: 0;
   overflow: hidden;
+  position: relative;
+  background: #e8dfd1;
 }
 
-.challenge-project-card .project-cover-image {
-  width: 100% !important;
-  height: 100% !important;
+/* Challenge UK image fills the entire cover */
+.card.challenge-project-card .project-cover-image {
   display: block;
-  object-fit: cover !important;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
   object-position: center;
+}
+
+/* Keep the project number visible */
+.card.challenge-project-card .number {
+  z-index: 2;
+}
+
+/* Smaller project cards on the homepage */
+.cards.compact .card.challenge-project-card > .visual {
+  height: 140px;
+}
+
+/* Mobile project cards */
+@media (max-width: 650px) {
+  .cards.compact .card.challenge-project-card > .visual {
+    height: 180px;
+  }
 }
