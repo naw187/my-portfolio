@@ -23,6 +23,21 @@
   width: 100%;
   height: 100%;
   display: block;
+  object-fit: contain;
+  object-position: center;
+}
+/* Challenge UK homepage image only */
+.challenge-project-card .challenge-cover-image {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: center;
+}
+/* Make Challenge UK fill its homepage project cover */
+.challenge-project-card .project-cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }

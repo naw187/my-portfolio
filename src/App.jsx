@@ -4,9 +4,59 @@ const linkedin='https://www.linkedin.com/in/naw-htoo-wai-9305202a3',email='naw.h
 const projects=[
 {id:'endometriosis-ai',n:'01',title:'AI for Endometriosis Detection',sub:'Multimodal Medical Imaging · MSc Dissertation',cat:'AI · MEDICAL IMAGING · RESEARCH',summary:'An ongoing MSc research project exploring AI-based analysis of MRI and transvaginal ultrasound (TVUS) images to identify endometriosis-related findings.',date:'2026 — IN DEVELOPMENT',visual:'health',cover:'/endometriosis-cover.jpg',tech:['Python','MRI','TVUS','Classical CNN','Quantum CNN (QCNN)','Keras','GPU','NVIDIA Jetson','Web Development'],details:['Explore the suitability, labels and permitted use of MRI and TVUS image datasets.','Develop and compare a Classical Convolutional Neural Network (CNN) and a Quantum Convolutional Neural Network (QCNN).','Build a web application where users can upload medical images and view outputs from both models.','Use Keras as a resource and framework for model development and experimentation.','Investigate GPU support for model training and inference, and explore NVIDIA Jetson for local model execution.']},
 
+
+{
+  id: 'smart-pulse',
+  n: '06',
+  title: 'SmartPulse',
+  sub: 'Smart Plant Care System',
+  cat: 'IOT · HARDWARE · SMART TECHNOLOGY',
+  summary: 'An IoT-based plant monitoring prototype using Raspberry Pi and Sense HAT to communicate plant health through visual face indicators.',
+  date: 'Hackathon Project',
+  visual: 'hardware',
+  cover: '/smart-pulse-cover.jpg',
+  tech: [
+    'Raspberry Pi',
+    'Sense HAT',
+    'LED Matrix',
+    'Sensor Integration',
+    'Buzzer',
+    'IoT'
+  ],
+  details: [
+    'Developed a smart plant care prototype using Raspberry Pi and connected hardware components.',
+    'Used the Sense HAT LED matrix to display face-like visual indicators representing plant health status.',
+    'Integrated electronic components and wiring to support the plant monitoring prototype.',
+    'Implemented visual and sound-based feedback to communicate system status.',
+    'Achieved 2nd Runner-up recognition in the Smart Pulse Hackathon.'
+  ]
+},
 {id:'health',n:'02',title:'Know You Better',sub:'Smart Health Monitoring App',cat:'CLOUD · MOBILE · HEALTH TECHNOLOGY',summary:'A cloud-based smart health monitoring app using wearable technology and connected services.',date:'June 2025',visual:'health',cover:'/know-you-better-cover.jpg',tech:['Azure','React Native','AKS','Cosmos DB','Azure Functions','Azure DevOps','Docker'],details:['Developed a cloud-native health app using Azure, React Native and wearable technology.','Designed a scalable architecture with AKS, Cosmos DB and Azure Functions.','Planned secure data flow using API Management and Application Gateway.','Set up a CI/CD pipeline using Azure DevOps and Docker containers.','Focused on real-time health data processing and GDPR-compliant storage.']},
 {id:'event',n:'03',title:'Event Management Website',sub:'Web Development Project',cat:'WEB DEVELOPMENT',summary:'An event management website with user login, RSVP, booking and an administration dashboard.',date:'May 2025',visual:'event',tech:['HTML','CSS','PHP','MySQL'],link:'https://homepages.shu.ac.uk/~c4058675/Website/home-page.php',details:['Built an event management system with user login, RSVP, booking and an admin dashboard.','Developed the website using HTML, CSS, PHP and MySQL.','Implemented client, sales and admin roles with access control.']},
-{id:'challenge',n:'04',title:'Challenge UK',sub:'Web-Based Booking Application',cat:'PRODUCT · PROJECT PLANNING',summary:'A proposed booking application designed to replace manual processes and improve access to booking information.',date:'April 2025',visual:'booking',tech:['Jira','MS Project','Cloud Hosting','Requirements Analysis'],details:['Proposed and designed a web-based booking system to replace manual processes.','Focused on improving operational efficiency, customer experience and real-time data access.','Defined functional specifications including user login, real-time booking, CRM and automated notifications.','Used Jira and MS Project for project management and planning.']},
+
+{
+  id: 'challenge',
+  n: '04',
+  title: 'Challenge UK',
+  sub: 'Web-Based Booking Application',
+  cat: 'PRODUCT · PROJECT PLANNING',
+  summary: 'A proposed booking application designed to replace manual processes and improve access to booking information.',
+  date: 'April 2025',
+  visual: 'booking',
+  cover: '/challenge-uk-cover.jpg',
+  tech: [
+    'Jira',
+    'MS Project',
+    'Cloud Hosting',
+    'Requirements Analysis'
+  ],
+  details: [
+    'Proposed and designed a web-based booking system to replace manual processes.',
+    'Focused on improving operational efficiency, customer experience and real-time data access.',
+    'Defined functional specifications including user login, real-time booking, CRM and automated notifications.',
+    'Used Jira and MS Project for project management and planning.'
+  ]
+},
 {id:'smarttech',n:'05',title:'SmartTech AI Use Case',sub:'Database & Big Data Group Project',cat:'DATABASE · DATA MODELLING',summary:'A group project exploring database design, normalisation and relational and big data systems.',date:'March 2025',visual:'database',tech:['Database Design','ER Modelling','3NF','Big Data'],details:['Normalised complex datasets up to Third Normal Form (3NF) to reduce redundancy and improve data integrity.','Applied top-down Entity Relationship modelling to design structured database relationships.','Evaluated scalability limits of relational models compared with modern big data systems.','Developed practical skills in data modelling, normalisation and database architecture evaluation.']}
 ];
 const skillGroups=[{title:'Development',icon:Code2,items:['HTML','CSS','JavaScript','PHP','C#','Python','Django','React.js']},{title:'Cloud & DevOps',icon:Cloud,items:['Microsoft Azure','AWS','Docker','Microservices','CI/CD','Git']},{title:'Data & Databases',icon:Database,items:['SQL','MySQL','NoSQL','Database Design','ERD','Data Modelling']},{title:'Planning & Delivery',icon:BriefcaseBusiness,items:['Jira','MS Project','Agile / Scrum','Gantt Charts','Risk Registers']},{title:'Soft Skills',icon:User,items:['Problem-Solving','Analytical Thinking','Communication & Teamwork','Adaptability','Time Management']}];
@@ -100,6 +150,60 @@ export default function App(){const[page,setPage]=useState('Home'),[project,setP
 {page==='Contact'&&<Inner kicker="06 / CONTACT" title={<>Let’s start a <em>conversation.</em></>} subtitle="For professional connections, project conversations and opportunities."><div className="contact-box"><div><p className="eyebrow">GET IN TOUCH</p><a className="email" href={'mailto:'+email}>{email} <ArrowUpRight/></a><p>Sheffield, United Kingdom</p></div><div className="contact-links"><a href={linkedin} target="_blank" rel="noreferrer"><Linkedin/> LinkedIn <ArrowUpRight/></a><a href="https://github.com/" target="_blank" rel="noreferrer"><Github/> GitHub <ArrowUpRight/></a><a href={'mailto:'+email}><Mail/> Email <ArrowUpRight/></a></div></div></Inner>}
 </main><footer><button className="logo" onClick={()=>go('Home')}>Naw Htoo Wai<span>.</span></button><span>DESIGNED WITH INTENTION · BUILT WITH CURIOSITY</span><button onClick={()=>go('Home')}>BACK TO TOP ↑</button></footer></div>}
 function Inner({kicker,title,subtitle,children}){return <section className="inner"><div className="page-head">{kicker&&<p className="eyebrow">{kicker}</p>}<h1>{title}</h1>{subtitle&&<p className="subline">{subtitle}</p>}</div>{children}</section>}
-function ProjectCard({p,click}){return <button className={p.id === 'endometriosis-ai' ? "card featured" : "card"} onClick={click}><div className={'visual '+p.visual}><Visual p={p}/><span className="number">{p.n}</span></div><div className="card-info"><small>{p.cat}</small><h3>{p.title}</h3><p>{p.sub}</p><i><ArrowUpRight size={16}/></i></div></button>}
-function Visual({p}){return p.cover?<img className="project-cover-image" src={p.cover} alt={p.title+' project cover'}/>:<div className="visual-art">{p.visual==='health'?<div className="phone"><b>♡</b><strong>Health</strong><small>Daily overview</small><span/></div>:p.visual==='event'?<div className="browser"><small>EVENTS</small><b>Make moments happen.</b><span/></div>:p.visual==='booking'?<div className="booking"><b>BOOKING</b><i/><i/><i/><i/></div>:<div className="database"><i/><i/><i/><i/></div>}</div>}
+
+function ProjectCard({p,click}) {
+  return (
+    <button
+      className={p.id === 'endometriosis-ai' ? 'card featured' : 'card'}
+      onClick={click}
+    >
+      <div className={`visual ${p.visual} ${p.id === 'challenge' ? 'challenge-project-card' : ''}`}>
+        <Visual p={p}/>
+        <span className="number">{p.n}</span>
+      </div>
+
+      <div className="card-info">
+        <small>{p.cat}</small>
+        <h3>{p.title}</h3>
+        <p>{p.sub}</p>
+        <i><ArrowUpRight size={16}/></i>
+      </div>
+    </button>
+  );
+}
+function Visual({p}) {
+  return p.cover ? (
+    <img
+      className={`project-cover-image ${p.id === 'challenge' ? 'challenge-cover-image' : ''}`}
+      src={p.cover}
+      alt={p.title + ' project cover'}
+    />
+  ) : (
+    <div className="visual-art">
+      {p.visual === 'health' ? (
+        <div className="phone">
+          <b>♡</b>
+          <strong>Health</strong>
+          <small>Daily overview</small>
+          <span />
+        </div>
+      ) : p.visual === 'event' ? (
+        <div className="browser">
+          <small>EVENTS</small>
+          <b>Make moments happen.</b>
+          <span />
+        </div>
+      ) : p.visual === 'booking' ? (
+        <div className="booking">
+          <b>BOOKING</b>
+          <i /><i /><i /><i />
+        </div>
+      ) : (
+        <div className="database">
+          <i /><i /><i /><i />
+        </div>
+      )}
+    </div>
+  );
+}
 function Tags({items}){return <div className="tags">{items.map(x=><span key={x}>{x}</span>)}</div>}
