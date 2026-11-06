@@ -67,3 +67,49 @@
     height: 180px;
   }
 }
+/* SmartTech – make the cover image fill the whole card */
+.card .visual.database {
+  display: block !important;
+  width: 100% !important;
+  height: 205px !important;
+  padding: 0 !important;
+  overflow: hidden;
+  position: relative;
+}
+
+.card .visual.database .project-cover-image {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  object-fit: cover !important;
+  object-position: center;
+}
+
+/* =====================================
+   SMARTTECH & CHALLENGE UK
+   INDIVIDUAL PROJECT DETAIL COVERS
+   ===================================== */
+
+/* Make both project image containers full width */
+.detail-visual.database,
+.detail-visual.booking {
+  display: block !important;
+  width: 100% !important;
+  height: 420px !important;
+  padding: 0 !important;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Make both images fill their containers */
+.detail-visual.database .project-cover-image,
+.detail-visual.booking .project-cover-image {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  object-fit: cover !important;
+  object-position: center;
+}
+
