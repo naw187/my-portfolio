@@ -7,7 +7,7 @@ const projects=[
 
 {
   id: 'smart-pulse',
-  n: '06',
+  n: '02',
   title: 'SmartPulse',
   sub: 'Smart Plant Care System',
   cat: 'IOT · HARDWARE · SMART TECHNOLOGY',
@@ -33,7 +33,7 @@ const projects=[
 },
 {
   id: 'challenge',
-  n: '04',
+  n: '03',
   title: 'Challenge UK',
   sub: 'Web-Based Booking Application',
   cat: 'PRODUCT · PROJECT PLANNING',
@@ -54,9 +54,36 @@ const projects=[
     'Used Jira and MS Project for project management and planning.'
   ]
 },
-{id:'health',n:'02',title:'Know You Better',sub:'Smart Health Monitoring App',cat:'CLOUD · MOBILE · HEALTH TECHNOLOGY',summary:'A cloud-based smart health monitoring app using wearable technology and connected services.',date:'June 2025',visual:'health',cover:'/know-you-better-cover.jpg',tech:['Azure','React Native','AKS','Cosmos DB','Azure Functions','Azure DevOps','Docker'],details:['Developed a cloud-native health app using Azure, React Native and wearable technology.','Designed a scalable architecture with AKS, Cosmos DB and Azure Functions.','Planned secure data flow using API Management and Application Gateway.','Set up a CI/CD pipeline using Azure DevOps and Docker containers.','Focused on real-time health data processing and GDPR-compliant storage.']},
-{id:'event',n:'03',title:'Event Management Website',sub:'Web Development Project',cat:'WEB DEVELOPMENT',visual: 'event',cover: '/event-management-cover.png',summary:'An event management website with user login, RSVP, booking and an administration dashboard.',date:'May 2025',visual:'event',tech:['HTML','CSS','PHP','MySQL'],link:'https://homepages.shu.ac.uk/~c4058675/Website/home-page.php',details:['Built an event management system with user login, RSVP, booking and an admin dashboard.','Developed the website using HTML, CSS, PHP and MySQL.','Implemented client, sales and admin roles with access control.']},
-{id:'smarttech',n:'05',title:'SmartTech AI Use Case',sub:'Database & Big Data Group Project',cat:'DATABASE · DATA MODELLING',cover: '/smarttech-cover.png',summary:'A group project exploring database design, normalisation and relational and big data systems.',date:'March 2025',visual:'database',tech:['Database Design','ER Modelling','3NF','Big Data'],details:['Normalised complex datasets up to Third Normal Form (3NF) to reduce redundancy and improve data integrity.','Applied top-down Entity Relationship modelling to design structured database relationships.','Evaluated scalability limits of relational models compared with modern big data systems.','Developed practical skills in data modelling, normalisation and database architecture evaluation.']}
+{id:'health',n:'04',title:'Know You Better',sub:'Smart Health Monitoring App',cat:'CLOUD · MOBILE · HEALTH TECHNOLOGY',summary:'A cloud-based smart health monitoring app using wearable technology and connected services.',date:'June 2025',visual:'health',cover:'/know-you-better-cover.jpg',tech:['Azure','React Native','AKS','Cosmos DB','Azure Functions','Azure DevOps','Docker'],details:['Developed a cloud-native health app using Azure, React Native and wearable technology.','Designed a scalable architecture with AKS, Cosmos DB and Azure Functions.','Planned secure data flow using API Management and Application Gateway.','Set up a CI/CD pipeline using Azure DevOps and Docker containers.','Focused on real-time health data processing and GDPR-compliant storage.']},
+{id:'event',n:'05',title:'Event Management Website',sub:'Web Development Project',cat:'WEB DEVELOPMENT',cover:'/event-management-cover.png',summary:'An event management website with user login, RSVP, booking and an administration dashboard.',date:'May 2025',visual:'event',tech:['HTML','CSS','PHP','MySQL'],link:'https://homepages.shu.ac.uk/~c4058675/Website/home-page.php',details:['Built an event management system with user login, RSVP, booking and an admin dashboard.','Developed the website using HTML, CSS, PHP and MySQL.','Implemented client, sales and admin roles with access control.']},
+{id:'smarttech',n:'06',title:'SmartTech AI Use Case',sub:'Database & Big Data Group Project',cat:'DATABASE · DATA MODELLING',cover: '/smarttech-cover.png',summary:'A group project exploring database design, normalisation and relational and big data systems.',date:'March 2025',visual:'database',tech:['Database Design','ER Modelling','3NF','Big Data'],details:['Normalised complex datasets up to Third Normal Form (3NF) to reduce redundancy and improve data integrity.','Applied top-down Entity Relationship modelling to design structured database relationships.','Evaluated scalability limits of relational models compared with modern big data systems.','Developed practical skills in data modelling, normalisation and database architecture evaluation.']},
+{id: 'university-system',
+  n: '07',
+  title: 'Cloud-Hosted University Information System',
+  sub: 'Full-Stack Web Application',
+  cat: 'CLOUD · WEB DEVELOPMENT · DATABASE',
+  summary: 'A team developed university information system built with Django and deployed using Microsoft Azure.',
+  date: '31/08/2025',
+  visual: 'university',
+  cover: '/university-system-cover.png',
+  tech: [
+    'Python',
+    'Django',
+    'SQLite',
+    'Bootstrap',
+    'CSS',
+    'Azure VM',
+    'Azure App Services',
+    'GitHub'
+  ],
+  details: [
+    'Collaborated in a three-person team to develop and deploy a university information system.',
+    'Supported user registration, authentication and module enrolment features.',
+    'Assisted with database integration, application setup and Azure deployment.',
+    'Troubleshot routing, deployment and application issues through team-based debugging.',
+    'Used GitHub for version control and collaborative development.'
+  ]
+},
 ];
 const skillGroups=[{title:'Development',icon:Code2,items:['HTML','CSS','JavaScript','PHP','C#','Python','Django','React.js']},{title:'Cloud & DevOps',icon:Cloud,items:['Microsoft Azure','AWS','Docker','Microservices','CI/CD','Git']},{title:'Data & Databases',icon:Database,items:['SQL','MySQL','NoSQL','Database Design','ERD','Data Modelling']},{title:'Planning & Delivery',icon:BriefcaseBusiness,items:['Jira','MS Project','Agile / Scrum','Gantt Charts','Risk Registers']},{title:'Soft Skills',icon:User,items:['Problem-Solving','Analytical Thinking','Communication & Teamwork','Adaptability','Time Management']}];
 export default function App(){const[page,setPage]=useState('Home'),[project,setProject]=useState(projects[0]),[menu,setMenu]=useState(false);const go=p=>{setPage(p);setMenu(false);window.scrollTo({top:0,behavior:'smooth'})};const open=p=>{setProject(p);go('Project detail')};const nav=['Home','About','Projects','Experience','Skills','Education','Contact'];return <div className="site"><header><button className="logo" onClick={()=>go('Home')}>Naw Htoo Wai<span>.</span></button><button className="hamb" onClick={()=>setMenu(!menu)} aria-label="Menu">{menu?<X/>:<Menu/>}</button><nav className={menu?'nav show':'nav'}>{nav.map(n=><button className={page===n?'selected':''} key={n} onClick={()=>go(n)}>{n}</button>)}</nav><button className="connect" onClick={()=>go('Contact')}>Let’s connect <ArrowUpRight size={15}/></button></header><main>
